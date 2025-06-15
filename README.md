@@ -7,16 +7,6 @@ This project showcases my work, skills, and journey as a Mobile Developer specia
 
 ---
 
-## ✨ Features
-
-- **Responsive Design:** Beautiful on both web and mobile.
-- **About Me:** My journey, skills, and fun facts.
-- **Projects & Experience:** Highlighted open-source and professional work.
-- **Contact:** Easy ways to reach me (LinkedIn, Email, GitHub).
-- **Dark/Light Mode:** Adapts to your system preference.
-- **Modern Stack:** Built with React, Vite, TypeScript, and Tailwind CSS.
-
----
 
 ## 🛠️ Tech Stack
 
