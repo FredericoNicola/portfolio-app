@@ -1,9 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import profile from "../../assets/profile.jpg"; // Adjust the path as needed
 import ActionButton from "../../components/ActionButton";
-
 const HomeWeb: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <div className="w-full h-full flex items-center justify-center px-8 py-12">
       <motion.div
@@ -44,7 +45,11 @@ const HomeWeb: React.FC = () => {
               href="/documents/Frederico_Nicola.pdf"
               download
             />
-            <ActionButton text="Contact Me" href="#contact" inverted />
+            <ActionButton
+              text="Contact Me"
+              onClick={() => navigate("/contact")}
+              inverted
+            />
           </div>
         </motion.div>
       </motion.div>

@@ -10,7 +10,7 @@ const About: React.FC = () => {
         Mobile Developer with a passion for building great apps with React
         Native, Kotlin, MAUI & TypeScript.
       </p>
-      <div className="w-full flex flex-col items-center space-y-2 mb-4">
+      <div className="w-full flex flex-col items-start space-y-2 mb-4">
         <span className="text-sm text-gray-600">
           🚀 Started coding in{" "}
           <span className="font-bold text-gray-900">2018</span>
