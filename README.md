@@ -87,15 +87,3 @@ src/
 - Email: frederico.nicola@email.com
 
 ---
-
-## 🏞️ Fun Fact
-
-I love cars and driving on beautiful roads with amazing views. If you see me out there, give a wave! 👋🚗
-
----
-
-## ⭐️ Show your support
-
-If you like this project, please consider starring the repo or connecting with me!
-
----
