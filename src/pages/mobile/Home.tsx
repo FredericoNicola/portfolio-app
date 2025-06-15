@@ -1,6 +1,6 @@
 import React from "react";
-import DownloadButton from "../../components/Button";
-import profile from "../../assets/profile.jpg"; // Adjust the path if needed
+import profile from "../../assets/profile.jpg";
+import ActionButton from "../../components/ActionButton";
 
 const Home: React.FC = () => {
   return (
@@ -17,17 +17,17 @@ const Home: React.FC = () => {
         Mobile Developer | React Native | TypeScript
       </p>
       <div className="flex flex-col w-full space-y-3">
-        <DownloadButton
-          fileUrl="/documents/Frederico_Nicola.pdf"
-          fileName="Frederico_Nicola.pdf"
-          label="Download Resume"
+        <ActionButton
+          text="Download Resume"
+          href="/documents/Frederico_Nicola.pdf"
+          download
         />
-        <a
+        <ActionButton
+          text="Contact Me"
           href="#contact"
-          className="px-6 py-3 bg-transparent border-2 border-gray-900 text-gray-900 font-bold rounded-lg shadow hover:bg-gray-900 hover:text-white text-center transition"
-        >
-          Contact Me
-        </a>
+          inverted
+          bgColor="bg-gray-200"
+        />
       </div>
     </div>
   );

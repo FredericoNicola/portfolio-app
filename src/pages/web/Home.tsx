@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import profile from "../../assets/profile.jpg"; // Adjust the path as needed
+import ActionButton from "../../components/ActionButton";
 
 const HomeWeb: React.FC = () => {
   return (
@@ -38,19 +39,12 @@ const HomeWeb: React.FC = () => {
             Mobile Developer | React Native | TypeScript
           </p>
           <div className="mt-8 flex flex-col sm:flex-row justify-center md:justify-start gap-4">
-            <a
+            <ActionButton
+              text="Download Resume"
               href="/documents/Frederico_Nicola.pdf"
               download
-              className="px-6 py-3 bg-white text-blue-600 font-bold border-white rounded-lg shadow-lg hover:bg-transparent hover:text-white border-2 text-center transition"
-            >
-              Download Resume
-            </a>
-            <a
-              href="#contact"
-              className="px-6 py-3 bg-transparent border-2 border-white text-white font-bold rounded-lg shadow-lg hover:bg-white hover:text-blue-600 text-center transition"
-            >
-              Contact Me
-            </a>
+            />
+            <ActionButton text="Contact Me" href="#contact" inverted />
           </div>
         </motion.div>
       </motion.div>
