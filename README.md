@@ -74,6 +74,6 @@ src/
 
 - [LinkedIn](https://www.linkedin.com/in/fredericonicola/)
 - [GitHub](https://github.com/fredericonicola)
-- Email: frederico.nicola@email.com
+- Email: fredericonicoladev@gmail.com
 
 ---
