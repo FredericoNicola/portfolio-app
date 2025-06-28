@@ -21,5 +21,4 @@ export const projects = [
     tech: ["Kotlin", "Android", "Firebase"],
     github: "https://github.com/FredericoNicola/HillClimbers",
   },
-  // Add more projects as needed
 ];

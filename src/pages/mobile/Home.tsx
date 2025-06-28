@@ -7,7 +7,7 @@ const Home: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="flex flex-col items-center justify-center px-4 py-8 space-y-6">
+    <div className="flex flex-col items-center justify-center px-4 py-8 space-y-6 bg-white flex-1">
       <img
         src={profile}
         alt="Frederico Nicola"

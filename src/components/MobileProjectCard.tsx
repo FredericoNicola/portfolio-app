@@ -16,7 +16,7 @@ const MobileProjectCard: React.FC<MobileProjectCardProps> = ({
   github,
   demo,
 }) => (
-  <div className="bg-white rounded-xl shadow p-4 mb-4">
+  <div className="bg-white rounded-xl border-gray-400 border-1 shadow p-4 mb-10">
     <h2 className="text-lg font-bold text-gray-900 mb-1">{name}</h2>
     <p className="text-gray-700 text-sm mb-2">{description}</p>
     <div className="flex flex-wrap gap-2 mb-2">

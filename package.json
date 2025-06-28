@@ -2,9 +2,10 @@
   "name": "portfolio-app",
   "version": "0.0.0",
   "private": true,
+  "homepage": "https://fredericonicola.com/",
   "description": "portfolio-app",
   "license": "ISC",
-  "author": "",
+  "author": "Frederico Nicola",
   "type": "module",
   "main": "eslint.config.js",
   "scripts": {

@@ -16,10 +16,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   github,
   demo,
 }) => (
-  <div className="bg-[#181e2a] rounded-2xl shadow-lg p-6 flex flex-col justify-between border border-[#23283a] hover:shadow-xl transition">
+  <div className="bg-[#181e2a] mb-10 rounded-2xl shadow-lg p-4 sm:p-6 flex flex-col justify-between border border-[#23283a] hover:shadow-xl transition w-full">
     <div>
-      <h2 className="text-2xl font-bold text-white mb-2">{name}</h2>
-      <p className="text-amber-100 mb-4">{description}</p>
+      <h2 className="text-lg sm:text-2xl font-bold text-white mb-2">{name}</h2>
+      <p className="text-gray-100 mb-4 text-sm sm:text-base">{description}</p>
       <div className="flex flex-wrap gap-2 mb-4">
         {tech.map((t) => (
           <span

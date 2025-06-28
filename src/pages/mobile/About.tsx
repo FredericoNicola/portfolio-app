@@ -2,7 +2,7 @@ import React from "react";
 
 const About: React.FC = () => {
   return (
-    <div className="flex flex-col items-center justify-start h-full w-full px-4 py-6 bg-white">
+    <div className="flex flex-col items-center justify-start px-4 py-6 bg-white flex-1">
       <h1 className="text-2xl font-extrabold text-gray-900 mb-2">About Me</h1>
       <p className="text-center text-base text-gray-700 mb-4">
         Hello, I'm Frederico Nicola.
@@ -32,7 +32,6 @@ const About: React.FC = () => {
           📱 First <span className="font-bold text-blue-400">React Native</span>{" "}
           app in <span className="font-bold text-gray-900">2023</span>
         </span>
-
         <span className="text-sm text-gray-600">
           💼 Last company:{" "}
           <span className="font-bold text-blue-600">Navigate Technologies</span>
