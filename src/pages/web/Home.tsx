@@ -20,9 +20,8 @@ const HomeWeb: React.FC = () => {
           <img
             src={profile}
             alt="Frederico Nicola"
-            width={320}
-            height={320}
-            className="rounded-2xl border-4 border-white shadow-lg object-cover"
+            width={350}
+            className="rounded-2xl border-4 contain-content border-white shadow-lg object-cover"
           />
         </motion.div>
 

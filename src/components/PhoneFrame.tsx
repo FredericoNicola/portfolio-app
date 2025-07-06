@@ -8,8 +8,8 @@ export default function PhoneFrame({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex justify-center items-center min-h-screen bg-[#101624]">
-      <div className="w-full h-[690px] bg-white rounded-[40px] shadow-2xl overflow-hidden border-[16px] border-black relative">
+    <div className="flex justify-center items-center min-h-screen bg-[#101624] mr-4">
+      <div className="w-full h-[720px] bg-white rounded-[40px] shadow-2xl overflow-hidden border-[16px] border-black relative">
         <div
           className="absolute left-1/2 -translate-x-1/2 top-4 w-28 h-6 bg-black rounded-full z-10 shadow-md"
           style={{

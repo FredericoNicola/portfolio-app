@@ -16,7 +16,7 @@ export default function BottomNav() {
   }
 
   return (
-    <nav className="absolute bottom-0 left-0 w-full h-14 bg-white border-t align-middle border-gray-200 flex justify-around items-center z-30">
+    <nav className="absolute bottom-0 border-t-gray-600 left-0 w-full h-14 bg-white border-t align-middle border-gray-200 flex justify-around items-center z-30">
       {navItems.map((item) => (
         <Link
           key={item.to}
