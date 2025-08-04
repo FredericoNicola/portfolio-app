@@ -9,37 +9,57 @@ type MobileExperienceCardProps = {
 const MobileExperienceCard: React.FC<MobileExperienceCardProps> = ({
   experience,
 }) => (
-  <div className="bg-white rounded-xl shadow p-4 mb-5 border border-gray-400 flex flex-col">
-    <div className="flex items-center gap-3 mb-2">
-      <div className="bg-blue-100 rounded-full p-2 flex items-center justify-center shadow">
-        {experience.icon || <FaBuilding className="text-2xl text-blue-500" />}
+  <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-4 border border-gray-200/50 hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
+    {/* Header */}
+    <div className="flex items-center gap-3 mb-3">
+      <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl p-2 shadow-md">
+        {experience.icon || <FaBuilding className="text-lg text-white" />}
       </div>
-      <div>
+      <div className="flex-1">
         <h2 className="text-lg font-bold text-gray-900">
           {experience.company}
         </h2>
-        <span className="text-blue-600 text-xs font-semibold">
-          {experience.title} • {experience.period}
-        </span>
+        <div className="flex flex-col gap-1">
+          <span className="text-blue-600 text-sm font-semibold">
+            {experience.title}
+          </span>
+          <span className="text-gray-500 text-xs font-medium">
+            {experience.period}
+          </span>
+        </div>
       </div>
     </div>
-    <div className="mt-2 text-gray-700 text-sm leading-relaxed space-y-2">
+
+    {/* Highlights */}
+    <div className="space-y-2 mb-4">
       {experience.highlights.map((highlight, idx) => (
-        <p key={idx}>
-          <FaDotCircle className="inline mr-1 text-blue-400" />
-          {highlight}
-        </p>
+        <div key={idx} className="flex items-start gap-2">
+          <FaDotCircle className="text-blue-500 mt-1 flex-shrink-0 text-xs" />
+          <p className="text-gray-700 text-sm leading-relaxed">{highlight}</p>
+        </div>
       ))}
     </div>
-    <div className="flex flex-wrap gap-2 mt-4">
-      {experience.tech.map((t) => (
+
+    {/* Tech Stack */}
+    <div className="flex flex-wrap gap-2">
+      {experience.tech.map((tech) => (
         <span
-          key={t}
-          className={`${
-            t === "React Native" ? "bg-blue-500 text-gray-950" : "bg-black"
-          } text-white px-2 py-0.5 rounded text-xs font-semibold`}
+          key={tech}
+          className={`
+            ${
+              tech === "React Native"
+                ? "bg-gradient-to-r from-cyan-500 to-blue-500"
+                : tech === ".NET MAUI"
+                ? "bg-gradient-to-r from-purple-500 to-indigo-500"
+                : tech === "TypeScript"
+                ? "bg-gradient-to-r from-blue-600 to-blue-700"
+                : "bg-gradient-to-r from-gray-600 to-gray-700"
+            }
+            text-white px-2 py-1 rounded-lg text-xs font-semibold shadow-sm
+            border border-white/20
+          `}
         >
-          {t}
+          {tech}
         </span>
       ))}
     </div>

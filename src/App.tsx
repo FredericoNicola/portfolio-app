@@ -40,7 +40,7 @@ function AppContent() {
         </div>
       </div>
       {/* PhoneFrame: only on desktop (md+) */}
-      <div className="hidden md:flex justify-center items-center w-[400px] h-screen sticky top-0 right-0">
+      <div className="hidden md:flex justify-center items-center w-[450px] h-screen sticky top-0 right-0">
         <PhoneFrame>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -51,7 +51,7 @@ function AppContent() {
         </PhoneFrame>
       </div>
       {/* Mobile app content: only on mobile (<md) */}
-      <div className="flex md:hidden flex-col h-screen w-full bg-white relative">
+      <div className="flex md:hidden flex-col h-fit w-full bg-white relative">
         <div className="flex-1 overflow-auto pb-16">
           <Routes>
             <Route path="/" element={<Home />} />

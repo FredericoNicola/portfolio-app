@@ -8,65 +8,93 @@ export default function PhoneFrame({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex justify-center items-center min-h-screen bg-[#101624] mr-4">
-      <div className="w-full h-[720px] bg-white rounded-[40px] shadow-2xl overflow-hidden border-[16px] border-black relative">
-        <div
-          className="absolute left-1/2 -translate-x-1/2 top-4 w-28 h-6 bg-black rounded-full z-10 shadow-md"
-          style={{
-            borderRadius: "16px",
-          }}
-        />
-        <div className="absolute top-5 left-6 flex items-center z-20 text-xs font-semibold text-gray-800 select-none">
-          Benzin
+    <div className="flex justify-center items-center min-h-screen bg-[#101624] mr-4 relative">
+      {/* Background glow effects */}
+      <div className="absolute top-20 left-1/4 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+      <div
+        className="absolute bottom-20 right-1/4 w-40 h-40 bg-purple-500/10 rounded-full blur-3xl animate-pulse"
+        style={{ animationDelay: "2s" }}
+      ></div>
+
+      {/* Phone container */}
+      <div className="relative group">
+        {/* Outer glow */}
+        <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-blue-600/20 rounded-[60px] blur-xl opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
+
+        {/* Phone frame */}
+        <div className="relative w-[380px] h-[720px] bg-gradient-to-b from-slate-800 to-slate-900 rounded-[40px] shadow-2xl overflow-hidden border-[8px] border-slate-700 backdrop-blur-sm">
+          {/* Inner phone bezel */}
+          <div className="absolute inset-2 bg-black rounded-[32px] shadow-inner overflow-hidden">
+            {/* Notch */}
+            <div className="absolute left-1/2 -translate-x-1/2 top-2 w-24 h-5 bg-black rounded-full z-30 shadow-lg border border-slate-600"></div>
+
+            {/* Status bar */}
+            <div className="absolute top-2 left-4 flex items-center z-30 text-xs font-semibold text-white select-none">
+              <div className="flex items-center gap-1">
+                <div className="w-1 h-1 bg-green-400 rounded-full animate-pulse"></div>
+                <span className="text-gray-300">Portfolio</span>
+              </div>
+            </div>
+
+            <div className="absolute top-2 right-4 flex items-center space-x-2 z-30">
+              {/* Modern signal bars */}
+              <div className="flex space-x-0.5">
+                <div className="w-0.5 h-6 bg-white rounded-full"></div>
+                <div className="w-0.5 h-5 bg-white rounded-full"></div>
+                <div className="w-0.5 h-4 bg-white rounded-full"></div>
+                <div className="w-0.5 h-3 bg-white rounded-full"></div>
+              </div>
+
+              {/* WiFi icon */}
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                  d="M2 6C5 4 11 4 14 6"
+                  stroke="#fff"
+                  strokeWidth="1"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M4 8.5C6 7.5 10 7.5 12 8.5"
+                  stroke="#fff"
+                  strokeWidth="1"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M6 11C7 10.5 9 10.5 10 11"
+                  stroke="#fff"
+                  strokeWidth="1"
+                  strokeLinecap="round"
+                />
+                <circle cx="8" cy="13" r="0.5" fill="#fff" />
+              </svg>
+
+              {/* Modern battery */}
+              <div className="flex items-center">
+                <div className="w-5 h-3 border border-white rounded-sm relative">
+                  <div className="absolute inset-0.5 bg-green-400 rounded-sm"></div>
+                </div>
+                <div className="w-0.5 h-1.5 bg-white rounded-r-sm ml-0.5"></div>
+              </div>
+            </div>
+
+            {/* Screen content area with shadow mask */}
+            <div className="absolute top-8 left-0 right-0 bottom-0 bg-white overflow-hidden">
+              {/* Inner shadow to blend bottom nav */}
+              <div className="absolute inset-0 shadow-[inset_0_-16px_24px_-8px_rgba(0,0,0,0.15)] rounded-b-[24px] pointer-events-none z-20"></div>
+
+              <div className="relative h-full w-full rounded-b-[24px] overflow-hidden">
+                {children}
+                <BottomNav />
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="absolute top-5 right-6 flex items-center space-x-2 z-20">
-          {/* Mobile Network */}
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <rect x="2" y="14" width="2" height="4" rx="1" fill="#222" />
-            <rect x="6" y="10" width="2" height="8" rx="1" fill="#222" />
-            <rect x="10" y="6" width="2" height="12" rx="1" fill="#222" />
-            <rect x="14" y="2" width="2" height="16" rx="1" fill="#222" />
-          </svg>
-          {/* WiFi */}
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <path
-              d="M3 8C7 5 13 5 17 8"
-              stroke="#222"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-            />
-            <path
-              d="M6 11C8.5 9.5 11.5 9.5 14 11"
-              stroke="#222"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-            />
-            <path
-              d="M9 14C10 13.5 11 13.5 12 14"
-              stroke="#222"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-            />
-            <circle cx="10" cy="16" r="1" fill="#222" />
-          </svg>
-          {/* Battery */}
-          <svg width="24" height="20" viewBox="0 0 24 20" fill="none">
-            <rect
-              x="2"
-              y="6"
-              width="18"
-              height="8"
-              rx="2"
-              fill="#fff"
-              stroke="#222"
-              strokeWidth="1.5"
-            />
-            <rect x="20" y="9" width="2" height="2" rx="0.5" fill="#222" />
-            <rect x="4" y="8" width="14" height="4" rx="1" fill="#222" />
-          </svg>
-        </div>
-        <div className="pt-16 px-2 h-full w-full bg-white">{children}</div>
-        <BottomNav />
+
+        {/* Side buttons */}
+        <div className="absolute -left-1 top-20 w-1 h-8 bg-slate-600 rounded-l-lg shadow-lg"></div>
+        <div className="absolute -left-1 top-32 w-1 h-12 bg-slate-600 rounded-l-lg shadow-lg"></div>
+        <div className="absolute -left-1 top-48 w-1 h-12 bg-slate-600 rounded-l-lg shadow-lg"></div>
+        <div className="absolute -right-1 top-28 w-1 h-16 bg-slate-600 rounded-r-lg shadow-lg"></div>
       </div>
     </div>
   );
