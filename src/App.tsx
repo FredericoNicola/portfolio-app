@@ -51,7 +51,7 @@ function AppContent() {
         </PhoneFrame>
       </div>
       {/* Mobile app content: only on mobile (<md) */}
-      <div className="flex md:hidden flex-col h-fit w-full bg-white relative">
+      <div className="flex md:hidden flex-col h-full w-full relative">
         <div className="flex-1 overflow-auto pb-16">
           <Routes>
             <Route path="/" element={<Home />} />

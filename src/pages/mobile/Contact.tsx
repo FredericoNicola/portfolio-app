@@ -3,7 +3,7 @@ import { CONTACTS } from "../../data/contacts";
 
 const Contact: React.FC = () => {
   return (
-    <div className="flex flex-col items-center justify-start px-4 py-6 bg-gradient-to-br from-blue-50 via-white to-purple-50 flex-1 overflow-y-auto">
+    <div className="flex flex-col items-center justify-start px-4 py-6 bg-gradient-to-br from-blue-50 via-white to-purple-50 h-full flex-1 overflow-y-auto">
       {/* Header */}
       <div className="text-center mb-6">
         <h1 className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 mb-2">

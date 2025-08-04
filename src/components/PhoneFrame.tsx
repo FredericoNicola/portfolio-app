@@ -37,12 +37,12 @@ export default function PhoneFrame({
             </div>
 
             <div className="absolute top-2 right-4 flex items-center space-x-2 z-30">
-              {/* Modern signal bars */}
-              <div className="flex space-x-0.5">
-                <div className="w-0.5 h-6 bg-white rounded-full"></div>
-                <div className="w-0.5 h-5 bg-white rounded-full"></div>
-                <div className="w-0.5 h-4 bg-white rounded-full"></div>
+              {/* Modern signal bars (grow from bottom to top) */}
+              <div className="flex items-end space-x-0.5">
                 <div className="w-0.5 h-3 bg-white rounded-full"></div>
+                <div className="w-0.5 h-4 bg-white rounded-full"></div>
+                <div className="w-0.5 h-5 bg-white rounded-full"></div>
+                <div className="w-0.5 h-6 bg-white rounded-full"></div>
               </div>
 
               {/* WiFi icon */}
@@ -94,7 +94,7 @@ export default function PhoneFrame({
         <div className="absolute -left-1 top-20 w-1 h-8 bg-slate-600 rounded-l-lg shadow-lg"></div>
         <div className="absolute -left-1 top-32 w-1 h-12 bg-slate-600 rounded-l-lg shadow-lg"></div>
         <div className="absolute -left-1 top-48 w-1 h-12 bg-slate-600 rounded-l-lg shadow-lg"></div>
-        <div className="absolute -right-1 top-28 w-1 h-16 bg-slate-600 rounded-r-lg shadow-lg"></div>
+        <div className="absolute -right-1 top-48 w-1 h-16 bg-slate-600 rounded-r-lg shadow-lg"></div>
       </div>
     </div>
   );

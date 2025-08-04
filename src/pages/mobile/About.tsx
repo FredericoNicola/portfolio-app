@@ -2,7 +2,7 @@ import React from "react";
 
 const About: React.FC = () => {
   return (
-    <div className="w-full h-full px-4 py-6 bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-y-auto">
+    <div className="w-full h-full px-4 py-6 bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-y-auto pb-20">
       {/* Header */}
       <div className="text-center mb-6">
         <h1 className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 mb-2">
@@ -126,8 +126,8 @@ const About: React.FC = () => {
         </div>
       </div>
 
-      {/* Fun Facts */}
-      <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-4 border pb-17 border-gray-200/50 w-full">
+      {/* Fun Facts - FIXED */}
+      <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-4 border border-gray-200/50 w-full mb-6">
         <h3 className="text-lg font-bold text-gray-900 mb-3 text-center">
           Fun Facts
         </h3>
